@@ -26,19 +26,20 @@ a {
 }
 
 .header__logo {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     margin-left: 30px;
 }
 
 .main {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .hero {
     position: relative;
+    width: 50%;
+    margin-top: 140px;
 }
 
 .hero__heading {
@@ -72,6 +73,7 @@ a {
 }
 
 /* ====================================== Sign Up ========================================= */
+
 .form__heading {
     font-size: 4rem;
     font-weight: 500;
@@ -79,8 +81,12 @@ a {
 }
 
 .form-group {
-    margin-top: 20px;
+    margin-top: 15px;
     position: relative;
+}
+
+.form-group:focus-within .form-input {
+    border: 2px solid var(--primary-color);
 }
 
 .form-input {
@@ -99,13 +105,29 @@ a {
     font-weight: 400;
 }
 
-.form-input:focus-within .form-input::placeholder {
-    display: none;
+.form-input.invalid {
+    background-color: rgb(255, 196, 196);
+}
+
+.form-group:focus-within .form-input.invalid {
+    border: 2px solid red;
+}
+
+.form-input::placeholder .invalid {
+    color: var(--white-color);
+}
+
+.form-message {
+    display: block;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    color: red;
 }
 
 /* ====================================== Button ========================================= */
 .form-btn {
-    margin-top: 28px;
+    margin-top: 30px;
     width: 370px;
     height: 60px;
     background-color: var(--primary-color);
@@ -119,7 +141,7 @@ a {
 }
 
 .form-desc {
-    margin-top: 48px;
+    margin-top: 30px;
     font-weight: 500;
     font-size: 1.6rem;
     color: #b5b5b5;
@@ -127,7 +149,7 @@ a {
 }
 
 .form-social {
-    margin-top: 46px;
+    margin-top: 30px;
     text-align: center;
 }
 

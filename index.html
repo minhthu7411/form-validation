@@ -39,72 +39,98 @@
 
             <div class="sign-up-form">
                 <h2 class="form__heading">Sign Up</h2>
-                <form action="" autocomplete="off">
+                <form
+                    method="POST"
+                    action="https://api-gateway.fullstack.edu.vn/action_page.php"
+                    autocomplete="off"
+                    id="form-1"
+                >
                     <div class="form-group">
                         <input
-                            type="text"
+                            type="email"
                             id="email"
+                            name="email"
                             class="form-input"
                             placeholder="Enter Email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            required
                         />
+                        <span class="form-message"></span>
                     </div>
 
                     <div class="form-group">
                         <input
                             type="text"
-                            id="user-name"
+                            id="fullName"
+                            name="fullName"
                             class="form-input"
                             placeholder="Create User Name"
+                            required
+                            minlength="3"
                         />
+                        <span class="form-message"></span>
                     </div>
 
                     <div class="form-group">
                         <input
                             type="tel"
-                            id="phone-number"
+                            id="phoneNumber"
+                            name="tel"
                             class="form-input"
                             placeholder="Contact Number"
+                            pattern="(84|0[3|5|7|8|9])+([0-9]{8})\b"
+                            required
                         />
+                        <span class="form-message"></span>
                     </div>
 
                     <div class="form-group">
                         <input
                             type="password"
                             id="password"
+                            name="password"
                             class="form-input"
                             placeholder="Password"
+                            required
+                            minlength="6"
                         />
+                        <span class="form-message"></span>
                     </div>
 
                     <div class="form-group">
                         <input
                             type="password"
-                            id="confirm-password"
+                            id="confirmPassword"
+                            name="confirmPassword"
                             class="form-input"
                             placeholder="Confirm Password"
+                            required
+                            minlength="6"
                         />
+                        <span class="form-message"></span>
                     </div>
+
                     <button class="form-btn">Register</button>
                     <p class="form-desc">or continue with</p>
                     <div class="form-social">
                         <a href="#!" class="form-social__link">
                             <img
                                 src="./assets/icon/icons8-facebook.svg"
-                                alt=""
+                                alt="Facebook"
                                 class="form-social__icon"
                             />
                         </a>
                         <a href="#!" class="form-social__link">
                             <img
                                 src="./assets/icon/icons8-twitter.svg"
-                                alt=""
+                                alt="Twitter"
                                 class="form-social__icon"
                             />
                         </a>
                         <a href="#!" class="form-social__link">
                             <img
                                 src="./assets/icon/icons8-google.svg"
-                                alt=""
+                                alt="Google"
                                 class="form-social__icon"
                             />
                         </a>
@@ -112,5 +138,17 @@
                 </form>
             </div>
         </main>
+
+        <!-- ================================ Validator ================================ -->
+        <script src="validator.js"></script>
+        <script>
+            Validator({
+                form: "#form-1",
+                rule: [
+                    Validator.isRequired("#fullName"),
+                    Validator.isEmail("#email"),
+                ],
+            });
+        </script>
     </body>
 </html>
