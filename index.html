@@ -4,42 +4,58 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./style.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+
         <title>Document</title>
     </head>
     <body>
-        <header>
-            <img src="" alt="" class="logo" />
+        <header class="header">
+            <img src="./assets/img/4-04.jpg" alt="" class="header__logo" />
         </header>
 
         <main class="main">
-            <div class="main__content">
-                <h1 class="main__heading">Sign Up to</h1>
-                <h2 class="main__title">Lorem Ipsum is simply</h2>
-                <p class="main__desc">If you already have an account</p>
-                <p class="main__desc">
+            <div class="hero">
+                <h1 class="hero__heading">Sign Up to</h1>
+                <h2 class="hero__title">Lorem Ipsum is simply</h2>
+                <p class="hero__desc">If you already have an account</p>
+                <p class="hero__desc">
                     You can
-                    <a href="#!" class="main__link">Login here!</a>
+                    <a href="#!" class="hero__link">Login here!</a>
                 </p>
-                <div class="main__img">
-                    <img src="" alt="" class="image" />
+                <div class="hero__img">
+                    <img
+                        src="./assets/img/5500_9_10.png"
+                        alt=""
+                        class="image"
+                    />
                 </div>
             </div>
 
             <div class="sign-up-form">
                 <h2 class="form__heading">Sign Up</h2>
-                <form action="" autocapitalize="off">
+                <form action="" autocomplete="off">
                     <div class="form-group">
-                        <input type="text" id="emai" class="form-input" />
-                        <label for="email" class="form-label">
-                            Enter Email
-                        </label>
+                        <input
+                            type="text"
+                            id="email"
+                            class="form-input"
+                            placeholder="Enter Email"
+                        />
                     </div>
 
                     <div class="form-group">
-                        <input type="text" id="user-name" class="form-input" />
-                        <label for="user-name" class="form-label">
-                            Create User name
-                        </label>
+                        <input
+                            type="text"
+                            id="user-name"
+                            class="form-input"
+                            placeholder="Create User Name"
+                        />
                     </div>
 
                     <div class="form-group">
@@ -47,10 +63,8 @@
                             type="tel"
                             id="phone-number"
                             class="form-input"
+                            placeholder="Contact Number"
                         />
-                        <label for="phone-number" class="form-label">
-                            Contact Number
-                        </label>
                     </div>
 
                     <div class="form-group">
@@ -58,10 +72,8 @@
                             type="password"
                             id="password"
                             class="form-input"
+                            placeholder="Password"
                         />
-                        <label for="password" class="form-label">
-                            Password
-                        </label>
                     </div>
 
                     <div class="form-group">
@@ -69,17 +81,33 @@
                             type="password"
                             id="confirm-password"
                             class="form-input"
+                            placeholder="Confirm Password"
                         />
-                        <label for="confirm-password" class="form-label">
-                            Confirm Password
-                        </label>
                     </div>
                     <button class="form-btn">Register</button>
                     <p class="form-desc">or continue with</p>
                     <div class="form-social">
-                        <img src="" alt="" class="form-social__icon" />
-                        <img src="" alt="" class="form-social__icon" />
-                        <img src="" alt="" class="form-social__icon" />
+                        <a href="#!" class="form-social__link">
+                            <img
+                                src="./assets/icon/icons8-facebook.svg"
+                                alt=""
+                                class="form-social__icon"
+                            />
+                        </a>
+                        <a href="#!" class="form-social__link">
+                            <img
+                                src="./assets/icon/icons8-twitter.svg"
+                                alt=""
+                                class="form-social__icon"
+                            />
+                        </a>
+                        <a href="#!" class="form-social__link">
+                            <img
+                                src="./assets/icon/icons8-google.svg"
+                                alt=""
+                                class="form-social__icon"
+                            />
+                        </a>
                     </div>
                 </form>
             </div>
