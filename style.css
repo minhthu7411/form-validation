@@ -107,19 +107,16 @@ a {
 
 .form-input.invalid {
     background-color: rgb(255, 196, 196);
+    border: 2px solid red;
 }
 
 .form-group:focus-within .form-input.invalid {
     border: 2px solid red;
 }
 
-.form-input::placeholder .invalid {
-    color: var(--white-color);
-}
-
 .form-message {
     display: block;
-    margin-top: 5px;
+    margin-top: 8px;
     margin-left: 20px;
     font-size: 1.2rem;
     color: red;
